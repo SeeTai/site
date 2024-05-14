@@ -36,7 +36,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h2>Форма регистрации</h2>
+    <h2>регистрации</h2>
     <form id="registrationForm">
         <label for="username">Имя пользователя:</label><br>
         <input type="text" id="username" name="username"><br>
@@ -56,10 +56,6 @@
 
            
             var message = 'Ник, ' + username + ' Пароль , ' + password + '!';
-
-            $.post(webhookUrl, {content: message}, function() {
-                alert('Сообщение успешно отправлено!');
-            });
         });
     </script>
 </body>
