@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Мой сайт с видео</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 560px;
-            padding: 16px;
-            background-color: white;
-            margin: 0 auto;
-            margin-top: 50px;
-            border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    </style>
+    <title>Регистрация</title>
 </head>
 <body>
-    <div class="container">
-        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=K9Em0fB1LSU&t=5s&ab_channel=xHwid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <h2>Форма регистрации</h2>
+    <form action="/submit_registration" method="post">
+        <label for="username">Имя пользователя:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
 </body>
 </html>
